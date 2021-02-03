@@ -9,6 +9,9 @@ export GITHUB_REPO=<repository-name>
 
 # steps for new cluster
 ```
+mkdir clusters/<stage>/<cluster_name>
+<create only kustomization.yaml or also patches if needed>
+
 flux check --pre
 
 flux bootstrap github \
