@@ -1,0 +1,13 @@
+controller:
+  replicaCount: 2
+  publishService:
+    enabled: true
+  service:
+    externalTrafficPolicy: Local
+    type: NodePort
+    # annotations:
+      # service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+defaultBackend:
+  enabled: true
+  nodeSelector:
+    beta.kubernetes.io/os: linux
